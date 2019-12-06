@@ -13,22 +13,35 @@ reqOpenDB.onsuccess = function (e) {
 // text ----> lines ----> may_words ----------> words
 //       \n          \s              [a-zA-Z]
 document.getElementById("start").addEventListener("click", function(){
+    let text = document.getElementById("input").value;
+    if(!text.trim()) {
+        alert("未检测到任何字符，请检查是否有输入。");
+        return;
+    }
+
+    let result = document.getElementById("result");
+    if (result) {result.innerHTML = "";}
+
+
+    let not_in_list_heading = document.createElement("h3");
+    not_in_list_heading.innerHTML = "① 不在单词列表中：";
+    result.appendChild(not_in_list_heading);
+
     // Not in list
     let notInList = document.getElementById("not-in-list");
-    if (notInList) {notInList.parentNode.removeChild(notInList);}
     notInList = document.createElement("div");
     notInList.id = "not-in-list";
-    document.body.appendChild(notInList);
+    result.appendChild(notInList);
+
+    let contrast_heading = document.createElement("h3");
+    contrast_heading.innerHTML = "② 原文对照（请选中来查看）：";
+    result.appendChild(contrast_heading);
 
     // 原文对照并突出显示 Not in list
     let contrast = document.getElementById("contrast");
-    if (contrast) {contrast.parentNode.removeChild(contrast);}
     contrast = document.createElement("div");
     contrast.id = "contrast";
-    document.body.appendChild(contrast);
-
-    let text = document.getElementById("input").value;
-    if(!text.trim()) {return;}
+    result.appendChild(contrast);
 
     let lines = text.match(/[\n]+|[^\n]+/g);
     let unmatched = {};

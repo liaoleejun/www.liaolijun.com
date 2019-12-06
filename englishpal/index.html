@@ -7,12 +7,15 @@
 </head>
 <body>
 <div class="main">
-    <h1>英语听力和口语刻意训练</h1>
-    <p>检测英语听力脚本中的生字。功能类似于 <a href="https://www.oxfordlearnersdictionaries.com/us/oxford_3000_profiler.html" target="_blank">Oxford 3000 Text Checker</a>，不过这里功能更丰富、可视化更好。</p>
-    <p>Note: 功能目前有一定局限性, 比如Oxford 3000, Oxford 5000 收录了do, 但是未收录does, done, did。而且令人惊奇的是我发现居然连 are 都没收录额。加了复数也未能识别，比如characters。复数+时态(不规则、规则)都不能正确匹配。</p>
-    <p class="note">注: <a href="https://www.oxfordlearnersdictionaries.com/wordlist/" target="_blank">什么是Oxford 3000/5000</a></p>
+    <h1>英语听、说刻意练习：Focus Unknown</h1>
+    <ul>
+        <li>检测英语听力脚本中的生字，功能类似于 <a href="https://www.oxfordlearnersdictionaries.com/us/oxford_3000_profiler.html" target="_blank">Oxford 3000 Text Checker</a></li>
+        <li>单词列表来自 <a href="https://www.oxfordlearnersdictionaries.com/wordlist/" target="_blank">Oxford 3000/5000</a>，以及通过爬取 <a href="https://cn.bing.com/dict/">Bing 词典</a> 获取单词的变形形式（比如名词的复数，动词的各种时态等等）</li>
+        <li>电脑端：不支持 IE，支持 Chrome、Firefox、Microsoft Edge。手机端：应该都支持。</li>
+        <li>有问题请联系：liaoleejun 艾特 gmail 点 com</li>
+    </ul>
 
-    <h2>1. 粘贴听力脚本</h2>
+    <h2>1. 粘贴听力的台词脚本</h2>
     <label for="input"><textarea name="input" id="input" rows="3"></textarea></label>
     <div class="note">提示：粘贴任何英文文字, 比如 <a href="https://fangj.github.io/friends/season/0101.html" target="_blank">Monica Gets A Roommate</a></div>
 
@@ -38,8 +41,9 @@
     <h2>3. 开始检测</h2>
     <button id="start">Start</button>
 </div>
+<div id="result"></div>
 
-<script src="data/wordlist.js"></script>
+<script src="src/data/wordlist.js"></script>
 <script src="src/db.js"></script>
 <script src="src/main.js"></script>
 

@@ -3,6 +3,7 @@ body {
     margin: 16px auto;
     border: 1px solid #E0E0E0;
     padding: 16px;
+    font-size: 80%;
 }
 
 textarea {
