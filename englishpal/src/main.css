@@ -1,0 +1,55 @@
+body {
+    max-width: 600px;
+    margin: 16px auto;
+    border: 1px solid #E0E0E0;
+    padding: 16px;
+}
+
+textarea {
+    width: 80%;
+}
+
+button {
+    background-color: green;
+    color: white;
+    font-size: 110%;
+    padding: auto 6px;
+    border-radius: 5%;
+    opacity: 0.8;
+}
+
+button:hover {
+    opacity: 1
+}
+
+
+.note {
+    font-size: 80%;
+    color: #aaa;
+}
+
+a {
+    color: #aaa;
+}
+
+#not-in-list {
+    background-color: #E0E0E0;
+    margin: 10px auto;
+}
+
+#contrast {
+    color: #F9F9F9;
+}
+
+#contrast::selection {
+    color: #333; /* WebKit/Blink Browsers */
+    background-color: #ACCEF7;
+}
+
+#contrast > span.not-in-list {
+    color: red;
+}
+
+#contrast > span.not-in-list::selection {
+    background-color: #ACCEF7;
+}
