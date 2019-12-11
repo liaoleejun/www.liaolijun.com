@@ -1,8 +1,9 @@
 body {
-    max-width: 600px;
+    max-width: 500px;
     margin: 16px auto;
-    border: 2px solid #E0E0E0;
+    border: 1px solid #E0E0E0;
     padding: 16px;
+    border-radius: 10px;
     color: #333;
 }
 
@@ -11,6 +12,7 @@ body > div {
 }
 
 .asterism {
-    text-align: center;
+    color: indianred;
     font-weight: bolder;
+    text-align: center;
 }
