@@ -1,0 +1,16 @@
+body {
+    max-width: 600px;
+    margin: 16px auto;
+    border: 1px solid #E0E0E0;
+    padding: 16px;
+    color: #333;
+}
+
+body > div {
+    border-bottom: solid 2px #E6E6E6;
+}
+
+.asterism {
+    text-align: center;
+    font-weight: bolder;
+}
